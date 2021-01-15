@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-<title>Bootstrap 101 Template</title>
+<title>Turtle Community - 사용자 목록</title>
 
 <!-- Bootstrap -->
 <link rel="stylesheet"
@@ -33,7 +33,7 @@
 				id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav navbar-right">
 					<li><a href="/form.html">회원가입</a></li>
-					<li><a href="/userList.html">사용자 목록</a></li>
+					<li><a href="/userList">사용자 목록</a></li>
 
 				</ul>
 			</div>
@@ -53,16 +53,13 @@
 						</tr>
 					</thead>
 					<tbody>
+						{{#users}}
 						<tr>
-							<th scope="row">ksh3490</th>
-							<td>테스트</td>
-							<td>ksh@sample.net</td>
+							<th scope="row">{{userId}}</th>
+							<td>{{userName}}</td>
+							<td>{{userEmail}}</td>
 						</tr>
-						<tr>
-							<th scope="row">turtle</th>
-							<td>터틀</td>
-							<td>turtle@sample.net</td>
-						</tr>
+						{{/users}}
 					</tbody>
 				</table>
 			</div>
