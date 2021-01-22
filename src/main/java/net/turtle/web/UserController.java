@@ -30,5 +30,10 @@ public class UserController {
 		model.addAttribute("users", userRepository.findAll());
 		return "user/list";
 	}
+	
+	@GetMapping("/form")
+	public String form() {
+		return "user/form";
+	}
 
 }
